@@ -30,7 +30,6 @@ switch ($request) {
         break;
 }
 echo("instanciate maincontroller");
-die();
 // instanciate mainController that runs everything else
 
 
