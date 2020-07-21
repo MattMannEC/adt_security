@@ -4,9 +4,7 @@ require 'header.php';
 
 ?>
 
-<h1>adt index page</h1>
-
-<a href="/form">form</a>
+<h1>contact form</h1>
 
 <?php
 
