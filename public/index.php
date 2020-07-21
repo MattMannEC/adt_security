@@ -29,4 +29,8 @@ switch ($request) {
         require __DIR__ . '/../views/404.php';
         break;
 }
+echo("instanciate maincontroller");
+die();
+// instanciate mainController that runs everything else
+
 
