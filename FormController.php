@@ -1,0 +1,63 @@
+<?php
+
+Class FormController
+{
+    public $messages;
+
+    public function processForm()
+    {
+        $email['emailAddress'] = $_POST['email'];
+        $email['fullName'] = $_POST['fullName'];
+        $email['postCode'] = $_POST['postCode']; 
+        $email['phoneNumber'] = $_POST['phoneNumber'];
+
+        return $email;
+    }
+
+    public function validateForm()
+    {
+
+        if ($_POST['email']) {
+            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                $this->messages['email'] = 'Please enter a valid email';
+            }
+        } else {
+            $this->messages['email'] = 'Please enter an email';
+        }
+
+        if ($_POST['fullName']) {
+            // keep space between first and last name by making 
+            // copy before validation
+            $fullName = str_replace(' ', '', $_POST['fullName']);
+            if ((strlen($fullName) < 2) || 
+                (strlen($fullName) > 30) || 
+                (!ctype_alpha($fullName))) {
+                    $this->messages['fullName'] = 'Please enter a valid name';
+            }
+        } else {
+            $this->messages['fullName'] = 'Please enter name';
+        }
+
+        if ($_POST['postCode']) {
+            $_POST['postCode'] = str_replace(' ', '', $_POST['postCode']);
+            if ((strlen($_POST['postCode']) < 6) || 
+                (strlen($_POST['postCode']) > 8) || 
+                (!ctype_alnum($_POST['postCode']))) {
+                    $this->messages['postCode'] = 'Please enter a valid post code';
+            }
+        } else {
+            $this->messages['postCode'] = 'Please enter a post code';
+        }
+
+        if ($_POST['phoneNumber']) {
+            $_POST['phoneNumber'] = str_replace(' ', '', $_POST['phoneNumber']);
+            if ((strlen($_POST['phoneNumber']) < 9) || 
+                (strlen($_POST['phoneNumber']) > 12) || 
+                (!ctype_digit($_POST['phoneNumber']))) {
+                    $this->messages['phoneNumber'] = 'Please enter a valid phone number';
+            }
+        } else {
+            $this->messages['phoneNumber'] = 'Please enter a phone number';
+        }
+    }
+}
