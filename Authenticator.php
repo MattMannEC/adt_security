@@ -16,7 +16,4 @@ Class Authenticator
     {
         
     }
-
-
-
 }

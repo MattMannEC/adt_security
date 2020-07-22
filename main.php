@@ -33,7 +33,9 @@ if (
 
         $user = $userController->read($login['username']);
         if ($loginFormController->validateLoginForm($login['password'], $user->password())) {
-            echo('arsenal');
+            header('Location: http://www.mikemosssecurity/admin');
+            
+
         } else {
             echo('Invalid Credentials');
         }

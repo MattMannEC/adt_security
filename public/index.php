@@ -17,11 +17,18 @@ switch ($request) {
         require __DIR__ . '/../views/form.php';
         break;
     
-    case '/admin' :
+    case '/login' :
         require __DIR__ . '/../views/login.php';
         break;
-    case '/admin/' :
+    case '/login/' :
         require __DIR__ . '/../views/login.php';
+        break;
+            
+    case '/admin' :
+        require __DIR__ . '/../views/admin.php';
+        break;
+    case '/admin/' :
+        require __DIR__ . '/../views/admin.php';
         break;
 
     default:
@@ -29,6 +36,3 @@ switch ($request) {
         require __DIR__ . '/../views/404.php';
         break;
 }
-// instanciate mainController that runs everything else
-
-

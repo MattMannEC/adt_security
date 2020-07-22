@@ -23,6 +23,4 @@ Class LoginFormController
     {
         return $this->authenticator->verifyPassword($password, $hash);
     }
-
-    
 }
