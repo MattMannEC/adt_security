@@ -7,7 +7,7 @@ require 'header.php';
 <h1>login page</h1>
 <div id="form-container" class='container'>
 
-    <form action="" method="post" id="ajax_login_form">
+    <form action="frontController.php" method="post" id="ajax_login_form">
         <div class="form-group">
             <label for="exampleInputEmail1">Username <span class="server-message username-message"></span></label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="passwordHelp" placeholder="Enter Username">

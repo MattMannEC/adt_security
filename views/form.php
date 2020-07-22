@@ -1,18 +1,16 @@
 <?php
-
 require 'header.php';
-
 ?>
 
 <h1>contact form</h1>
 
 <div id="success-screen" class="container success-container">
         <h2 class="success-message">Thank you, your details have been submitted.</h2>
-        <a href="index.php">homepage</a>
+        <a href="/">homepage</a>
     </div>
 
     <div id="form-container" class='container'>
-        <form action="../main.php" method="post" id="ajax_form">
+        <form action="frontController.php" method="post" id="ajax_form">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address <span class="server-message email-message"></span></label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
