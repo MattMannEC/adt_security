@@ -23,7 +23,7 @@ switch ($request) {
     case '/login/' :
         require __DIR__ . '/../views/login.php';
         break;
-            
+
     case '/admin' :
         require __DIR__ . '/../views/admin.php';
         break;
@@ -36,3 +36,5 @@ switch ($request) {
         require __DIR__ . '/../views/404.php';
         break;
 }
+
+$app = new App();

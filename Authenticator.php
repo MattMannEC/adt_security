@@ -14,6 +14,10 @@ Class Authenticator
 
     public function startSession()
     {
-        
+        return session_start();
     }
+
+    // verify session
+
+    // end session
 }
