@@ -30,11 +30,16 @@ Class App
 
         $user = $userController->read($login['username']);
         if ($loginFormController->validateLoginForm($login['password'], $user->password())) {
-
-            header('Location: http://www.mikemosssecurity/admin');
+            $this->adminModule();
+            
         } else {
             echo('Invalid Credentials');
         }
+    }
+
+    public function adminModule()
+    {
+        header('Location: http://www.mikemosssecurity/admin');
     }
 
 }
