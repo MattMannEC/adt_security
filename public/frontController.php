@@ -1,6 +1,6 @@
 <?php
 
-require '../main.php';
+require '../App.php';
 
 $app = new App();
 
@@ -21,3 +21,5 @@ if (
     (!empty($_POST['password']))) {
         $app->loginModule();
     }
+
+
