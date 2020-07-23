@@ -26,13 +26,15 @@ class UserController
         $q->execute();
 
         // Un comment to show errors
-        if (!$q) {
-            echo "\nPDO::errorInfo():\n";
-            print_r($this->_db->errorInfo());
-        }
+        // if (!$q) {
+        //     echo "\nPDO::errorInfo():\n";
+        //     print_r($this->_db->errorInfo());
+        // }
 
         $data = $q->fetch(PDO::FETCH_ASSOC);
-        return new User($data);
+        if ($data) {
+            return new User($data);
+        }
     }
 
     public function readAll()

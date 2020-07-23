@@ -4,7 +4,7 @@ require '../App.php';
 
 $app = new App();
 
-// handle AJAX request from contact form
+// handle AJAX request from forms
 
 if (
     (!empty($_POST['email'])) ||
@@ -12,14 +12,10 @@ if (
     (!empty($_POST['PostCode'])) ||
     (!empty($_POST['phoneNumber']))) {
         echo($app->contactModule());
-    }
-
-// handle login form request
-
-if (
+} elseif (
     (!empty($_POST['username'])) ||
     (!empty($_POST['password']))) {
-        $app->loginModule();
-    }
-
-
+        echo($app->loginModule());
+} else {
+    header('Location: /');
+}

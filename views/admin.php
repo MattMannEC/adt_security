@@ -1,8 +1,6 @@
 <?php
 
 require 'header.php';
-
-$adminController = new AdminController();
 ?>
 
 <h1>admin page</h1>

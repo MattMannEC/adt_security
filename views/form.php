@@ -10,7 +10,7 @@ require 'header.php';
     </div>
 
     <div id="form-container" class='container'>
-        <form action="frontController.php" method="post" id="ajax_form">
+        <form action="frontController.php" method="post" id="ajax_form_contact">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address <span class="server-message email-message"></span></label>
                 <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">

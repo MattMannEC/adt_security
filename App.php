@@ -26,20 +26,24 @@ Class App
         $db = new Db();
         $loginFormController = new LoginFormController();
         $userController = new UserController($db->connect());
-        $login = $loginFormController->processLoginForm();
-
-        $user = $userController->read($login['username']);
-        if ($loginFormController->validateLoginForm($login['password'], $user->password())) {
-            $this->adminModule();
-            
-        } else {
-            echo('Invalid Credentials');
+        $loginFormController->validateForm();
+        if (empty($loginFormController->messages)) {
+            $login = $loginFormController->processLoginForm();
+            if ($user = $userController->read($login['username'])) {
+                if ($loginFormController->checkPassword($login['password'], $user->password())) {
+                    $loginFormController->messages['success'] = true;
+                    $this->adminModule();
+                } else {
+                    header('Location: /login');
+                    echo('Invalid Credentials');
+                }
+            }
         }
+        return json_encode($loginFormController->messages);
     }
 
     public function adminModule()
     {
-        header('Location: http://www.mikemosssecurity/admin');
     }
 
 }

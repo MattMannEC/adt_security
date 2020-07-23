@@ -2,7 +2,7 @@
 
 Class LoginFormController
 {
-    public $message;
+    public $messages;
     public $authenticator;
     public $login;
 
@@ -19,7 +19,17 @@ Class LoginFormController
         return $login;
     }
 
-    public function validateLoginForm($password, $hash)
+    public function validateForm()
+    {
+        if (!$_POST['username']) {
+            $this->messages['username'] = 'Please enter a username';
+        }
+        if (!$_POST['password']) {
+            $this->messages['password'] = 'Please enter a password';
+        }
+    }
+
+    public function checkPassword($password, $hash)
     {
         return $this->authenticator->verifyPassword($password, $hash);
     }
