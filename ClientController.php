@@ -6,18 +6,17 @@ class ClientController
 
     public function __construct($db)
     {
-        $this->_db = $db;
+        $this->db = $db;
     }
 
-    public function create(Client $client)
+    public function create()
     {
-        $q = $this->_db->prepare('INSERT INTO client(id, email, full_name, post_code, phone_number) VALUES(:id, :email, :full_name, :post_code, :phone_number)');
+        $q = $this->db->query("INSERT INTO client(email, full_name, post_code, phone_number) VALUES('dortwag@googlemail.com', 'Matt Mann', 'ex66az', '076445269')");
 
-        $q->bindvalue(':id', $client->id());
-        $q->bindvalue(':email', $client->email());
-        $q->bindvalue(':full_name', $client->fullName());
-        $q->bindvalue(':post_code', $client->postCode());
-        $q->bindvalue(':phone_number', $client->phoneNumber());
+        // $q->bindvalue(':email', $client->email());
+        // $q->bindvalue(':full_name', $client->fullName());
+        // $q->bindvalue(':post_code', $client->postCode());
+        // $q->bindvalue(':phone_number', $client->phoneNumber());
 
         $q->execute();
     }
