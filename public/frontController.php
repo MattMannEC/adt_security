@@ -12,10 +12,4 @@ if (
     (!empty($_POST['PostCode'])) ||
     (!empty($_POST['phoneNumber']))) {
         echo($app->contactModule());
-} elseif (
-    (!empty($_POST['username'])) ||
-    (!empty($_POST['password']))) {
-        echo($app->loginModule());
-} else {
-    header('Location: /');
 }

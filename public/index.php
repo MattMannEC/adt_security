@@ -16,20 +16,6 @@ switch ($request) {
     case '/form/' :
         require __DIR__ . '/../views/form.php';
         break;
-    
-    case '/login' :
-        require __DIR__ . '/../views/login.php';
-        break;
-    case '/login/' :
-        require __DIR__ . '/../views/login.php';
-        break;
-
-    case '/admin' :
-        require __DIR__ . '/../views/admin.php';
-        break;
-    case '/admin/' :
-        require __DIR__ . '/../views/admin.php';
-        break;
 
     default:
         http_response_code(404);
