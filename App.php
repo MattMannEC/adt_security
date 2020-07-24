@@ -21,30 +21,22 @@ Class App
         return json_encode($formController->messages);
     }
 
-    public function loginModule()
-    {
-        $db = new Db();
-        $loginFormController = new LoginFormController();
-        $userController = new UserController($db->connect());
-        $loginFormController->validateForm();
-        if (empty($loginFormController->messages)) {
-            $login = $loginFormController->processLoginForm();
-            if ($user = $userController->read($login['username'])) {
-                if ($loginFormController->checkPassword($login['password'], $user->password())) {
-                    $loginFormController->messages['success'] = true;
-                    $this->adminModule();
-                } else {
-                    header('Location: /login');
-                    echo('Invalid Credentials');
-                }
-            }
-        }
-        return json_encode($loginFormController->messages);
-    }
-
-    public function adminModule()
-    {
-        
-    }
-
 }
+
+$data = [
+    "email" => "dortwag@gmail.com",
+    "fullName" => 'Matt Mann',
+    "postCode" => "ex6 6az",
+    "phoneNumber" => "0758932498"];
+
+$client = new Client($data);
+$db = new Db();
+
+var_dump($client);
+die();
+
+$clientController = new ClientController($db->connect());
+
+$clientController->create($client);
+
+
