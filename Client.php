@@ -2,11 +2,11 @@
 
 Class Client 
 {
-    public $_id;
-    public $_email;
-    public $_fullName;
-    public $_postCode;
-    public $_phoneNumber;
+    public $id;
+    public $email;
+    public $fullName;
+    public $postCode;
+    public $phoneNumber;
 
     public function __construct($data)
     {
@@ -27,48 +27,48 @@ Class Client
 
     public function id()
     {
-        return $this->_id;
+        return $this->id;
     }
 
     public function email()
     {
-        return $this->_email;
+        return $this->email;
     }
 
 
     public function fullName()
     {
-        return $this->_fullName;
+        return $this->fullName;
     }
 
     public function postCode()
     {
-        return $this->_postCode;
+        return $this->postCode;
     }
 
     public function phoneNumber()
     {
-        return $this->_phoneNumber;
+        return $this->phoneNumber;
     }
 
     public function setEmail($email)
     {
-        return $this->_email = $email;
+        return $this->email = $email;
     }
 
     public function setFullName($fullName)
     {
-        return $this->_fullName = $fullName;
+        return $this->fullName = $fullName;
     }
 
     public function setPostCode($postCode)
     {
-        return $this->_postCode = $postCode;
+        return $this->postCode = $postCode;
     }
 
     public function setPhoneNumber($phoneNumber)
     {
-        return $this->_phoneNumber = $phoneNumber;
+        return $this->phoneNumber = $phoneNumber;
     }
 }
 

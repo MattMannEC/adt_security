@@ -25,8 +25,8 @@ Class App
 
 $data = [
     "email" => "dortwag@gmail.com",
-    "fullName" => "Matt Mann",
-    "postCode" => "ex6 6az",
+    "fullName" => "MattMann",
+    "postCode" => "ex66az",
     "phoneNumber" => "0758932498",];
 
 $client = new Client($data);
@@ -35,5 +35,4 @@ $db = new Db();
 $clientController = new ClientController($db->connect());
 
 $clientController->create();
-
 

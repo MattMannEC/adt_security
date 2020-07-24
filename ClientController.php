@@ -11,14 +11,27 @@ class ClientController
 
     public function create()
     {
-        $q = $this->db->query("INSERT INTO client(email, full_name, post_code, phone_number) VALUES('dortwag@googlemail.com', 'Matt Mann', 'ex66az', '076445269')");
+        var_dump($client);
+        $q = $this->db->prepare("INSERT INTO client(email, full_name, post_code, phone_number) VALUES(:email, :full_name, :post_code, :phone_number)");
 
-        // $q->bindvalue(':email', $client->email());
-        // $q->bindvalue(':full_name', $client->fullName());
-        // $q->bindvalue(':post_code', $client->postCode());
-        // $q->bindvalue(':phone_number', $client->phoneNumber());
+        $q->bindValue(':email', $client->email());
+        $q->bindValue(':full_name', $client->fullName());
+        $q->bindValue(':post_code', $client->postCode());
+        $q->bindValue(':phone_number', $client->phoneNumber());
 
         $q->execute();
+    }
+    public function readAll()
+    {
+        $users = [];
+        $q = $this->db->query('SELECT id, username, password FROM user ORDER BY id');
+
+        $data = $q->fetch(PDO::FETCH_ASSOC);
+
+        var_dump($data);
+        die();
+
+        return $users;
     }
 
 }
