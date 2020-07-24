@@ -34,5 +34,5 @@ $db = new Db();
 
 $clientController = new ClientController($db->connect());
 
-$clientController->create();
+$clientController->create($client);
 

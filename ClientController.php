@@ -9,7 +9,7 @@ class ClientController
         $this->db = $db;
     }
 
-    public function create()
+    public function create($client)
     {
         var_dump($client);
         $q = $this->db->prepare("INSERT INTO client(email, full_name, post_code, phone_number) VALUES(:email, :full_name, :post_code, :phone_number)");
@@ -20,18 +20,6 @@ class ClientController
         $q->bindValue(':phone_number', $client->phoneNumber());
 
         $q->execute();
-    }
-    public function readAll()
-    {
-        $users = [];
-        $q = $this->db->query('SELECT id, username, password FROM user ORDER BY id');
-
-        $data = $q->fetch(PDO::FETCH_ASSOC);
-
-        var_dump($data);
-        die();
-
-        return $users;
     }
 
 }
