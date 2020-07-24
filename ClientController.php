@@ -11,7 +11,6 @@ class ClientController
 
     public function create($client)
     {
-        var_dump($client);
         $q = $this->db->prepare("INSERT INTO client(email, full_name, post_code, phone_number) VALUES(:email, :full_name, :post_code, :phone_number)");
 
         $q->bindValue(':email', $client->email());

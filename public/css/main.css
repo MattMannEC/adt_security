@@ -1,0 +1,111 @@
+section {
+    min-height: 100vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* section 1 */
+
+.aa_container {
+    background-color: white;
+}
+
+.authorisedAgent {
+    width: 129px;
+    display: block;
+    margin: auto;
+}
+
+#section1 {
+    background-color: rgb(2, 82, 162);
+}
+
+.adtLogo {
+    width: 126px;
+    display: block;
+    margin: auto;
+}
+
+#section1
+h1 {
+    color: white;
+}
+
+#section1
+h3 {
+    color: white;
+}
+
+/* section 2 */
+
+#section2 {
+    background-color: rgb(2, 82, 162);
+}
+
+.alarmContainer {
+    background-color: rgb(100, 144, 242);
+}
+
+#section2
+h2 {
+    color: white;
+}
+
+#section2
+h5 {
+    color: white;
+}
+
+.alarmSystem {
+    width: 264px;
+    display: block;
+    margin: auto;
+}
+
+.alarmSystemTextsDiv {
+
+}
+
+
+/* section 3 */
+
+.argumentDiv {
+    background-color: rgb(100, 144, 242);
+}
+
+#section3 {
+    background-color: white;
+}
+
+.argumentTitleBlack,
+.argumentTextBlack {
+    color: black;
+}
+
+.argumentTitle {
+    color: white;
+}
+
+.argumentTitle,
+.argumentText {
+    color: white;
+}
+
+.trustPilot {
+    width: 298px;
+}
+
+.nsiGold {
+    width: 65px;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.footerText {
+    color: white;
+}
