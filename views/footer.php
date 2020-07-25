@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div>
+<footer class="footer text-center">
+    <div class="container">
         <p class="footerText">*A Burglary happens every 40 seconds in the UK: Source Crimestoppers</p>
         <p class="footerText">*30% Rise In UK Domestic Burglaries: source Neighbourhood Watch</p>
         <p class="footerText">*70% of UK homes don’t have a burglar alarm: Source The Sun</p>

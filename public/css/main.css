@@ -1,7 +1,7 @@
 section {
     min-height: 100vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* section 1 */
@@ -43,7 +43,7 @@ h3 {
 }
 
 .alarmContainer {
-    background-color: rgb(100, 144, 242);
+    background-color: rgba(71, 121, 232, 1);
 }
 
 #section2
@@ -92,11 +92,18 @@ h5 {
 }
 
 .trustPilot {
-    width: 298px;
+    width: 100%;
+}
+
+.nsiContainer {
+    width: 80%;
 }
 
 .nsiGold {
     width: 65px;
+}
+
+.nsiText {
 }
 
 footer {
