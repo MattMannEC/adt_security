@@ -5,6 +5,9 @@ $(document).ready(function(){
 		$(".fullname-message").empty();
 		$(".postcode-message").empty();
 		$(".phonenumber-message").empty();
+		function scrollToTop() { 
+			$(window).scrollTop(0); 
+		}
 
 		event.preventDefault();
 		var post_url = $(this).attr("action");
@@ -19,10 +22,11 @@ $(document).ready(function(){
 				$(".postcode-message").html(response.postCode);
 				$(".phonenumber-message").html(response.phoneNumber);
 				if (response.success) {
-					$("#successSection").addClass('d-block')
-					$("#formSection").addClass('d-none')
-				}			
+					$("#successSection").addClass('d-block');
+					$("#formSection").addClass('d-none');
+				}		
 			},
 			'JSON');
+			scrollToTop();
 	})
 })
