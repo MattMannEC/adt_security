@@ -19,8 +19,8 @@ $(document).ready(function(){
 				$(".postcode-message").html(response.postCode);
 				$(".phonenumber-message").html(response.phoneNumber);
 				if (response.success) {
-					$("#success-screen").addClass('d-block')
-					$("#form-container").addClass('d-none')
+					$("#successSection").addClass('d-block')
+					$("#formSection").addClass('d-none')
 				}			
 			},
 			'JSON');

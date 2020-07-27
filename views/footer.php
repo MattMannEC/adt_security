@@ -1,9 +1,9 @@
-<footer class="footer text-center py-2">
+<footer class="footer text-center pt-2">
     <div class="container">
         <p class="footerText">*A Burglary happens every 40 seconds in the UK: Source Crimestoppers</p>
         <p class="footerText">*30% Rise In UK Domestic Burglaries: source Neighbourhood Watch</p>
         <p class="footerText">*70% of UK homes don’t have a burglar alarm: Source The Sun</p>
-        <p class="footerText">*A small monthly monitoring and maintenance charge applies and will be explained and included in your quote</p>
+        <p class="footerText pb-5">*A small monthly monitoring and maintenance charge applies and will be explained and included in your quote</p>
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

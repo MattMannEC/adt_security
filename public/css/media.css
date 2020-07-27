@@ -1,6 +1,114 @@
+/* Up to tablet */
 
 @media (max-width: 575px) {
     .container {
         max-width: 320px;
     }
+}
+
+/* Tablet and bigger */
+
+@media (min-width: 576px) and (min-height: 900px)  {
+    .freeQuoteLink {
+        font-size: 4rem;
+    }
+
+    #section1 {
+        height: 80vh;
+    }
+
+    .adtLogo {
+        width: 130px;
+    }
+
+    #section1 h1 {
+        font-size: 4rem;
+    }
+
+    #section1 h4 {
+        font-size: 2rem;
+    }
+
+    #section3 {
+        height: 60vh;
+    }
+
+    .formTitle {
+        font-size: 4rem;
+    }
+
+    .successMessageTitle {
+        font-size: 4rem;
+    }
+
+    footer {
+        padding-bottom: 5rem;
+    }
+}
+
+/* big screens */
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .freeQuoteLink {
+        font-size: 4rem;
+    }
+
+    #section1 {
+        height: 80vh;
+    }
+
+    .adtLogo {
+        width: 130px;
+    }
+
+    #section1 h1 {
+        font-size: 3.5rem;
+    }
+
+    #section1 h4 {
+        font-size: 1.5rem;
+    }
+
+    #section3 {
+        height: 60vh;
+    }
+
+    .formTitle {
+        font-size: 4rem;
+    }
+
+    .successMessageTitle {
+        font-size: 4rem;
+    }
+
+    footer {
+        padding-bottom: 5rem;
+    }
+
+
+
+}
+@media (min-width: 1200px) {
+
+    #section1 h1 {
+        font-size: 5rem;
+    }
+    #section1 {
+        min-height: 600px;
+    }
+
+    #section3 {
+        min-height: 450px;
+    }
+
+
+    .successMessageTitle {
+        font-size: 6rem;
+    }
+
+
 }

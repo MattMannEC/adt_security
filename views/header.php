@@ -18,3 +18,7 @@ include '../App.php';
 ?>
 
 <body>
+
+<div class="container aa_container py-1">
+    <img src="img/authorised_agent.png" class="authorisedAgent" alt="authorised agent">
+</div>

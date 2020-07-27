@@ -1,7 +1,42 @@
-.success-container {
+#successSection {
     display: none;
+    background-color: rgb(2, 82, 162);
 }
 
-#success-screen {
-    height: 100vh;
+#formSection {
+    display: block;
 }
+
+.successContainer {
+    height: 88vh;
+}
+
+.successMessage {
+    color: white;
+}
+
+#formSection {
+    background-color: rgb(2, 82, 162);
+    min-height: 550px;
+    height: 90vh;
+}
+
+.formContainer {
+    height: 100%;
+}
+
+.formTitle {
+    color: white;
+    text-align: center;
+}
+
+#formSection label {
+    color: white;
+}
+
+.server-message {
+    color: rgba(236, 100, 75, 1);
+}
+
+/* success */
+

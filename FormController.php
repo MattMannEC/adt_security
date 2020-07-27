@@ -19,7 +19,7 @@ Class FormController
 
         if ($_POST['email']) {
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $this->messages['email'] = 'Please enter a valid email';
+                $this->messages['email'] = 'Invalid Email';
             }
         } else {
             $this->messages['email'] = 'Please enter an email';
@@ -32,7 +32,7 @@ Class FormController
             if ((strlen($fullName) < 2) || 
                 (strlen($fullName) > 30) || 
                 (!ctype_alpha($fullName))) {
-                    $this->messages['fullName'] = 'Please enter a valid name';
+                    $this->messages['fullName'] = 'Invalid Name';
             }
         } else {
             $this->messages['fullName'] = 'Please enter name';
@@ -43,7 +43,7 @@ Class FormController
             if ((strlen($_POST['postCode']) < 6) || 
                 (strlen($_POST['postCode']) > 8) || 
                 (!ctype_alnum($_POST['postCode']))) {
-                    $this->messages['postCode'] = 'Please enter a valid post code';
+                    $this->messages['postCode'] = 'Invalid post code';
             }
         } else {
             $this->messages['postCode'] = 'Please enter a post code';
@@ -54,10 +54,10 @@ Class FormController
             if ((strlen($_POST['phoneNumber']) < 9) || 
                 (strlen($_POST['phoneNumber']) > 12) || 
                 (!ctype_digit($_POST['phoneNumber']))) {
-                    $this->messages['phoneNumber'] = 'Please enter a valid phone number';
+                    $this->messages['phoneNumber'] = 'Invalid phone number';
             }
         } else {
-            $this->messages['phoneNumber'] = 'Please enter a phone number';
+            $this->messages['phoneNumber'] = 'Please enter a number';
         }
     }
 }
