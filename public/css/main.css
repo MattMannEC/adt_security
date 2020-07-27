@@ -1,10 +1,19 @@
 section {
-    min-height: 100vh;
+    min-height: 80vh;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
+h1, h2, h3, h4, h5 ,h6 a, p {
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 100;
+}
+
 /* section 1 */
+
+#section1 {
+    height: 100vh;
+}
 
 .aa_container {
     background-color: white;
@@ -21,7 +30,7 @@ section {
 }
 
 .adtLogo {
-    width: 126px;
+    width: 70px;
     display: block;
     margin: auto;
 }
@@ -29,11 +38,14 @@ section {
 #section1
 h1 {
     color: white;
+    padding: 1rem 0 1rem;
+
 }
 
 #section1
-h3 {
+h4 {
     color: white;
+    padding: 1rem 0 1rem;
 }
 
 /* section 2 */
@@ -43,7 +55,9 @@ h3 {
 }
 
 .alarmContainer {
+    box-sizing: border-box;
     background-color: rgba(71, 121, 232, 1);
+    border: 10px solid rgb(2, 82, 162);
 }
 
 #section2
@@ -52,7 +66,7 @@ h2 {
 }
 
 #section2
-h5 {
+p {
     color: white;
 }
 
@@ -80,6 +94,8 @@ h5 {
 .argumentTitleBlack,
 .argumentTextBlack {
     color: black;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 100;
 }
 
 .argumentTitle {
@@ -89,6 +105,7 @@ h5 {
 .argumentTitle,
 .argumentText {
     color: white;
+    line-height: 1.2;
 }
 
 .trustPilot {
@@ -115,4 +132,8 @@ footer {
 
 .footerText {
     color: white;
+    font-family: "Open Sans",Arial,sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    font-style: italic;
 }

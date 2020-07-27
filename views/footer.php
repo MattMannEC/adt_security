@@ -1,4 +1,4 @@
-<footer class="footer text-center">
+<footer class="footer text-center py-2">
     <div class="container">
         <p class="footerText">*A Burglary happens every 40 seconds in the UK: Source Crimestoppers</p>
         <p class="footerText">*30% Rise In UK Domestic Burglaries: source Neighbourhood Watch</p>
