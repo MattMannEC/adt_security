@@ -9,9 +9,9 @@ Class App
         $formController = new FormController();
         $formController->validateForm();
         if (empty($formController->messages)) {
-            $email = $formController->processForm();
+            $client = $formController->processForm();
             $emailer = new Emailer();
-            $email = $emailer->compose($email);
+            $email = $emailer->compose($client);
             if ($email) {
                 if($emailer->send($email)) {
                     $formController->messages['success'] = true;
@@ -20,7 +20,7 @@ Class App
         }
         return json_encode($formController->messages);
     }
-
+    
 }
 
 $data = [
@@ -30,8 +30,8 @@ $data = [
     "phoneNumber" => "0758932498",];
 
 $client = new Client($data);
-$db = new Db();
 
+$db = new Db();
 $clientController = new ClientController($db->connect());
 
 $clientController->create($client);

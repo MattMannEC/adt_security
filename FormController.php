@@ -6,12 +6,12 @@ Class FormController
 
     public function processForm()
     {
-        $email['emailAddress'] = $_POST['email'];
-        $email['fullName'] = $_POST['fullName'];
-        $email['postCode'] = $_POST['postCode']; 
-        $email['phoneNumber'] = $_POST['phoneNumber'];
+        $client['emailAddress'] = $_POST['email'];
+        $client['fullName'] = $_POST['fullName'];
+        $client['postCode'] = $_POST['postCode']; 
+        $client['phoneNumber'] = $_POST['phoneNumber'];
 
-        return $email;
+        return $client;
     }
 
     public function validateForm()
