@@ -1,9 +1,11 @@
 <?php
 require 'header.php';
 ?>
-<div class="stickyBannerDiv py-3 text-center">
-    <a href="/form" class="freeQuoteLink">Get A Free Quote</a>
-</div>
+<a href="/form">
+    <div class="stickyBannerDiv py-3 text-center">
+        <h3 class="freeQuoteLink">Get A Free Quote</h3>
+    </div>
+</a>
 <section id="section1">
     <div class="container welcomeContainer text-center py-1 d-flex justify-content-center flex-column">
         <img src="img/adt_logo.png" class="adtLogo mx-auto" alt="ADT Logo">
