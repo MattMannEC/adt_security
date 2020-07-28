@@ -5,17 +5,23 @@ Class Emailer
     public $to = "dortwag@gmail.com";
     public $subject = "this is the subject";
     
-    public function compose($client)
+    public function compose(Client $client)
     {
-        $message = $client['fullName'] . ' ' . $client['postCode'] . " would like to know more about ADT Security, 
-                                please get in contact with them. " . $client['emailAddress'] . ' - ' . $client['phoneNumber'];
+        $message = 
+            $client->fullName() .
+            ' ' . $client->postCode() . 
+            " would like to know more about ADT Security, 
+            please get in contact with them. " .
+            $client->email() . 
+            ' - ' . 
+            $client->phoneNumber();
 
         // use wordwrap() if lines are longer than 70 characters
         $message = wordwrap($message,70);
 
         $headers = [
-            'From' => $client['emailAddress'], 
-            'Reply-To' => $client['emailAddress'], 
+            'From' => $client->email(), 
+            'Reply-To' => $client->email(), 
             'Content-type' => 'text/html; charset=iso-8859-1',
         ];
 

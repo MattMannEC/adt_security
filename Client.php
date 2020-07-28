@@ -7,6 +7,7 @@ Class Client
     public $fullName;
     public $postCode;
     public $phoneNumber;
+    public $emailSent;
 
     public function __construct($data)
     {
@@ -51,6 +52,11 @@ Class Client
         return $this->phoneNumber;
     }
 
+    public function emailSent()
+    {
+        return $this->emailSent;
+    }
+
     public function setEmail($email)
     {
         return $this->email = $email;
@@ -69,6 +75,11 @@ Class Client
     public function setPhoneNumber($phoneNumber)
     {
         return $this->phoneNumber = $phoneNumber;
+    }
+
+    public function setEmailSent($emailSent)
+    {
+        return $this->emailSent = $emailSent;
     }
 }
 

@@ -6,17 +6,18 @@ Class FormController
 
     public function processForm()
     {
-        $client['emailAddress'] = $_POST['email'];
+        $client['email'] = $_POST['email'];
         $client['fullName'] = $_POST['fullName'];
         $client['postCode'] = $_POST['postCode']; 
         $client['phoneNumber'] = $_POST['phoneNumber'];
+
+        $client = new Client($client);
 
         return $client;
     }
 
     public function validateForm()
     {
-
         if ($_POST['email']) {
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                 $this->messages['email'] = 'Invalid Email';
