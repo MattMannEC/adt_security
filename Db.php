@@ -4,11 +4,11 @@ class Db
 {
     public function connect()
     {
-        $db = new PDO(
-            'mysql:host=127.0.0.1;dbname=modula', 
+        return new PDO(
+            'mysql:host=127.0.0.1;dbname=adt_security', 
             'root', 
             '123'
         );
-        return $db;
+        
     }
 }
